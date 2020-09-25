@@ -1,0 +1,67 @@
+.intro{
+    margin-top: 64px;
+    
+    @include device(phone){
+        margin-top: 32px;
+    }
+}
+
+.logo{
+    margin-bottom: 64px;
+    @include device(phone){
+        margin-left: 30%;
+    }
+}
+
+.intro-info{
+    border-right: 2px solid $font-color;
+    max-width: 320px;
+    p{
+        padding-top: 16px;
+    }
+    p:first-child{
+        border-bottom: 2px solid $font-color;
+        padding-bottom: 16px;
+    }
+}
+
+.intro-telefone{
+    color: $dark-color;
+    @include device(phone){
+        margin-bottom: 32px;
+    }
+    &::after{
+        content: '////';
+        color: $font-color;
+        display: block;
+        font-weight: bold;
+        margin-top: 258px;
+        font-size: 200px;
+        letter-spacing: -50px;
+
+        @include device(tablet){
+            margin-top: 64px;
+            font-size: 100px;
+            letter-spacing: -10px;
+        }
+
+        @include device(phone){
+            display: none;
+        }
+
+    }
+}
+
+.aberto{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 16px;
+    background: $verde;
+    border-radius: 50%;
+}
+
+.intro-foto{
+    border: 10px solid $medium-color;
+    width: 100%;
+}

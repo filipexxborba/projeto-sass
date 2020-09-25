@@ -1,0 +1,84 @@
+.contato{
+    margin-top: 64px;
+    margin-bottom: 64px;
+
+    @include device(phone){
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+}
+
+.contato form{
+    label{
+        @include type-1(18);
+        display: block;
+    }
+    input[type="text"], textarea{
+        @include type-1(18);
+        color: $font-color;
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        border: 2px solid $dark-color;
+        background: transparent;
+        margin-bottom: 1em;
+
+        &:focus{
+            outline: none;
+            border-color: $medium-color;
+        }
+    }
+    textarea{
+        height: 120px;
+    }
+}
+
+input.button{
+    @include type-1(18);
+    cursor: pointer;
+    color: $dark-color;
+    text-transform: uppercase;
+    border: 2px solid $dark-color;
+    background: transparent;
+    display: block;
+    width: 200px;
+    padding-top: 5px;
+    @include box-shadow(5px 5px 0 -2px $medium-color, 5px 5px 0 0 $dark-color);
+
+    transition: .3s;
+    &:hover{
+        @include box-shadow(3px 3px 0 -2px $medium-color, 3px 3px 0 0 $dark-color);
+    }
+}
+
+.contato-info{
+    display: inline-block;
+    color: $dark-color;
+    float: right;
+    text-align: right;
+    margin-top: -3em;
+    margin-bottom: 3em;
+
+    @include device(tablet){
+        font-size: 12px;
+    }
+
+    @include device(phone){
+        font-size: 12px;
+    }
+}
+
+.contato-mapa{
+    margin-top: 32px;
+    display: block;
+    clear: both;
+    img{
+        width: 100%;
+        border: 10px solid $medium-color;
+        transition: .3s;
+        &:hover{
+            border-color: $dark-color;
+        }
+    }
+}
